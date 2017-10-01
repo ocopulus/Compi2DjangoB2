@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-2">
+    <div class="well no-padding">
+       <div>
+           <ul class="nav nav-list nav-menu-list-style">
+               <li>
+                 <label class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>
+                   FIUSAC
+                           <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                   <ul class="nav nav-list tree bullets" id="BD">
+                       <li><a href="#">JavaScript</a></li>
+                       <li><a href="#">CSS <span class="badge">42</span></a></li>
+                   </ul>
+               </li>
+               <li class="divider"></li>
+               <li>
+                 <label class="tree-toggle nav-header">Usuarios
+                   <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span>
+                </label>
+                   <ul class="nav nav-list tree" id="usuarios">
+                       <li><a href="#">Admin</a></li>
+                       <li><a href="#">Putas</a></li>
+                   </ul>
+               </li>
+           </ul>
+       </div>
+   </div>
+  </div>
+  <!--div class="col-md-9"-->
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#contact_0" data-toggle="tab">Joe Smith</a><span>x</span>
+            </li>
+            <li><a href="#" class="add-contact">+ Add Contact</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="contact_0">
+              <textarea class="textarea4 form-control" rows="10" id="txt0"></textarea>
+              <br/>
+              <button type="button" class="btn btn-success" onclick="tabla('txt0')">Ejecucar</button>
+              <button type="button" class="btn btn-success" onclick="saveTextAsFile('txt0')">Guardar</button>
+              <button type="button" class="btn btn-success" onclick="buscarError('txt0')">Validar Errores</button>
+            </div>
+        </div>
+        <br/>
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#SalidaD" aria-controls="home" role="tab" data-toggle="tab">Salida de Datos</a></li>
+          <li role="presentation"><a href="#ejecucion" aria-controls="profile" role="tab" data-toggle="tab">Plan de Ejecución</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Mensajes</a></li>
+          <li role="presentation"><a href="#Historial" aria-controls="settings" role="tab" data-toggle="tab">Historial</a></li>
+          <li role="presentation"><a href="#Error" aria-controls="settings" role="tab" data-toggle="tab">Error</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active scrollable2" id="SalidaD">
+          </div>
+          <div role="tabpanel" class="tab-pane scrollable2" id="ejecucion">
+            <textarea class="form-control" id="txtejecucion" rows="9" readonly>
+            </textarea>
+          </div>
+          <div role="tabpanel" class="tab-pane scrollable2" id="messages">
+            <textarea class="form-control" id="txtmensaje" rows="9" readonly>
+            </textarea>
+          </div>
+          <div role="tabpanel" class="tab-pane scrollable2" id="Historial">
+            <textarea class="form-control" id="txtHistorial" rows="9" readonly>
+            </textarea>
+          </div>
+          <div role="tabpanel" class="tab-pane scrollable2" id="Error">
+            <textarea class="form-control" id="txtError" rows="9" readonly>
+            </textarea>
+          </div>
+        </div>
+
+    </div>
+  <!--/div-->
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Fiusac USQL</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'reporte' %}">Reporte</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{request.session.us}} <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{% url 'desconectar' %}">Desconectar</a></li>
+                        <li><a href="#">yolo</a></li>
+                        <li>
+                          <div class="input-group">
+                            <span class="input-group-btn">
+                              <input type="file" id="file-input" />
+                            </span>
+                            <input type="text" id="carga" class="form-control" placeholder="numero txt">
+                          </div><!-- /input-group -->
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        {% block content %}
+        {% endblock %}
+        <br/>
+        <hr/>
+
+    </div>
+    <footer>
+        <p>&copy; {{year}} Fiusac BY Juan José Lemus Vásquez</p>
+    </footer>
+
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.textcomplete.js' %}"></script>
+    <script src="{% static 'js/tab.js' %}"></script>
+    <script src="{% static 'js/rep.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+</html>

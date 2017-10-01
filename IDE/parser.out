@@ -1,0 +1,216 @@
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> inicio
+Rule 1     inicio -> json
+Rule 2     json -> ACOR contenido CCOR
+Rule 3     contenido -> contenido COMA CADENA DOSP valor
+Rule 4     contenido -> CADENA DOSP valor
+Rule 5     valor -> CADENA
+Rule 6     valor -> json
+Rule 7     valor -> NUMERO
+Rule 8     valor -> CODIGO
+Rule 9     valor -> VER
+Rule 10    valor -> FAL
+
+Terminals, with rules where they appear
+
+ACOR                 : 2
+CADENA               : 3 4 5
+CCOR                 : 2
+CODIGO               : 8
+COMA                 : 3
+DOSP                 : 3 4
+FAL                  : 10
+NUMERO               : 7
+VER                  : 9
+error                : 
+
+Nonterminals, with rules where they appear
+
+contenido            : 2 3
+inicio               : 0
+json                 : 1 6
+valor                : 3 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . inicio
+    (1) inicio -> . json
+    (2) json -> . ACOR contenido CCOR
+
+    ACOR            shift and go to state 3
+
+    inicio                         shift and go to state 1
+    json                           shift and go to state 2
+
+state 1
+
+    (0) S' -> inicio .
+
+
+
+state 2
+
+    (1) inicio -> json .
+
+    $end            reduce using rule 1 (inicio -> json .)
+
+
+state 3
+
+    (2) json -> ACOR . contenido CCOR
+    (3) contenido -> . contenido COMA CADENA DOSP valor
+    (4) contenido -> . CADENA DOSP valor
+
+    CADENA          shift and go to state 5
+
+    contenido                      shift and go to state 4
+
+state 4
+
+    (2) json -> ACOR contenido . CCOR
+    (3) contenido -> contenido . COMA CADENA DOSP valor
+
+    CCOR            shift and go to state 6
+    COMA            shift and go to state 7
+
+
+state 5
+
+    (4) contenido -> CADENA . DOSP valor
+
+    DOSP            shift and go to state 8
+
+
+state 6
+
+    (2) json -> ACOR contenido CCOR .
+
+    $end            reduce using rule 2 (json -> ACOR contenido CCOR .)
+    CCOR            reduce using rule 2 (json -> ACOR contenido CCOR .)
+    COMA            reduce using rule 2 (json -> ACOR contenido CCOR .)
+
+
+state 7
+
+    (3) contenido -> contenido COMA . CADENA DOSP valor
+
+    CADENA          shift and go to state 9
+
+
+state 8
+
+    (4) contenido -> CADENA DOSP . valor
+    (5) valor -> . CADENA
+    (6) valor -> . json
+    (7) valor -> . NUMERO
+    (8) valor -> . CODIGO
+    (9) valor -> . VER
+    (10) valor -> . FAL
+    (2) json -> . ACOR contenido CCOR
+
+    CADENA          shift and go to state 10
+    NUMERO          shift and go to state 13
+    CODIGO          shift and go to state 14
+    VER             shift and go to state 15
+    FAL             shift and go to state 16
+    ACOR            shift and go to state 3
+
+    valor                          shift and go to state 11
+    json                           shift and go to state 12
+
+state 9
+
+    (3) contenido -> contenido COMA CADENA . DOSP valor
+
+    DOSP            shift and go to state 17
+
+
+state 10
+
+    (5) valor -> CADENA .
+
+    CCOR            reduce using rule 5 (valor -> CADENA .)
+    COMA            reduce using rule 5 (valor -> CADENA .)
+
+
+state 11
+
+    (4) contenido -> CADENA DOSP valor .
+
+    CCOR            reduce using rule 4 (contenido -> CADENA DOSP valor .)
+    COMA            reduce using rule 4 (contenido -> CADENA DOSP valor .)
+
+
+state 12
+
+    (6) valor -> json .
+
+    CCOR            reduce using rule 6 (valor -> json .)
+    COMA            reduce using rule 6 (valor -> json .)
+
+
+state 13
+
+    (7) valor -> NUMERO .
+
+    CCOR            reduce using rule 7 (valor -> NUMERO .)
+    COMA            reduce using rule 7 (valor -> NUMERO .)
+
+
+state 14
+
+    (8) valor -> CODIGO .
+
+    CCOR            reduce using rule 8 (valor -> CODIGO .)
+    COMA            reduce using rule 8 (valor -> CODIGO .)
+
+
+state 15
+
+    (9) valor -> VER .
+
+    CCOR            reduce using rule 9 (valor -> VER .)
+    COMA            reduce using rule 9 (valor -> VER .)
+
+
+state 16
+
+    (10) valor -> FAL .
+
+    CCOR            reduce using rule 10 (valor -> FAL .)
+    COMA            reduce using rule 10 (valor -> FAL .)
+
+
+state 17
+
+    (3) contenido -> contenido COMA CADENA DOSP . valor
+    (5) valor -> . CADENA
+    (6) valor -> . json
+    (7) valor -> . NUMERO
+    (8) valor -> . CODIGO
+    (9) valor -> . VER
+    (10) valor -> . FAL
+    (2) json -> . ACOR contenido CCOR
+
+    CADENA          shift and go to state 10
+    NUMERO          shift and go to state 13
+    CODIGO          shift and go to state 14
+    VER             shift and go to state 15
+    FAL             shift and go to state 16
+    ACOR            shift and go to state 3
+
+    valor                          shift and go to state 18
+    json                           shift and go to state 12
+
+state 18
+
+    (3) contenido -> contenido COMA CADENA DOSP valor .
+
+    CCOR            reduce using rule 3 (contenido -> contenido COMA CADENA DOSP valor .)
+    COMA            reduce using rule 3 (contenido -> contenido COMA CADENA DOSP valor .)
+

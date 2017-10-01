@@ -1,0 +1,125 @@
+
+ .container {
+    margin-top: 10px;
+}
+.nav-tabs > li {
+    position:relative;
+}
+.nav-tabs > li > a {
+    display:inline-block;
+}
+.nav-tabs > li > span {
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    right: 6px;
+    top: 8px;
+    color: red;
+}
+.nav-tabs > li:hover > span {
+    display: inline-block;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {height: 1500px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;}
+}
+
+
+.scrollable {
+          height: 600px; /* or any value */
+          width: 210px;
+           overflow-y: auto;
+           overflow-x: auto;
+}
+
+.white{
+  color: white;
+}
+.wallp {
+
+  background: rgba(23,23,23,1);
+  background: -moz-linear-gradient(top, rgba(23,23,23,1) 0%, rgba(28,28,28,1) 12%, rgba(31,31,31,1) 25%, rgba(20,20,20,1) 39%, rgba(13,13,13,1) 46%, rgba(0,0,0,1) 51%, rgba(5,5,5,1) 60%, rgba(13,13,13,1) 76%, rgba(8,8,8,1) 91%, rgba(5,5,5,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,23,23,1)), color-stop(12%, rgba(28,28,28,1)), color-stop(25%, rgba(31,31,31,1)), color-stop(39%, rgba(20,20,20,1)), color-stop(46%, rgba(13,13,13,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(5,5,5,1)), color-stop(76%, rgba(13,13,13,1)), color-stop(91%, rgba(8,8,8,1)), color-stop(100%, rgba(5,5,5,1)));
+  background: -webkit-linear-gradient(top, rgba(23,23,23,1) 0%, rgba(28,28,28,1) 12%, rgba(31,31,31,1) 25%, rgba(20,20,20,1) 39%, rgba(13,13,13,1) 46%, rgba(0,0,0,1) 51%, rgba(5,5,5,1) 60%, rgba(13,13,13,1) 76%, rgba(8,8,8,1) 91%, rgba(5,5,5,1) 100%);
+  background: -o-linear-gradient(top, rgba(23,23,23,1) 0%, rgba(28,28,28,1) 12%, rgba(31,31,31,1) 25%, rgba(20,20,20,1) 39%, rgba(13,13,13,1) 46%, rgba(0,0,0,1) 51%, rgba(5,5,5,1) 60%, rgba(13,13,13,1) 76%, rgba(8,8,8,1) 91%, rgba(5,5,5,1) 100%);
+  background: -ms-linear-gradient(top, rgba(23,23,23,1) 0%, rgba(28,28,28,1) 12%, rgba(31,31,31,1) 25%, rgba(20,20,20,1) 39%, rgba(13,13,13,1) 46%, rgba(0,0,0,1) 51%, rgba(5,5,5,1) 60%, rgba(13,13,13,1) 76%, rgba(8,8,8,1) 91%, rgba(5,5,5,1) 100%);
+  background: linear-gradient(to bottom, rgba(23,23,23,1) 0%, rgba(28,28,28,1) 12%, rgba(31,31,31,1) 25%, rgba(20,20,20,1) 39%, rgba(13,13,13,1) 46%, rgba(0,0,0,1) 51%, rgba(5,5,5,1) 60%, rgba(13,13,13,1) 76%, rgba(8,8,8,1) 91%, rgba(5,5,5,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#050505', GradientType=0 );
+
+}
+
+.scrollable2 {
+    height: 200px; /* or any value */
+    width: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.no-padding{
+  padding:0px;
+}
+.glyphicon-icon-rpad .glyphicon,.glyphicon-icon-rpad .glyphicon.m8,.fa-icon-rpad .fa,.fa-icon-rpad .fa.m8{ padding-right:8px; }
+.glyphicon-icon-lpad .glyphicon,.glyphicon-icon-lpad .glyphicon.m8,.fa-icon-lpad .fa,.fa-icon-lpad .fa.m8{ padding-left:8px; }
+.glyphicon-icon-rpad .glyphicon.m5,.fa-icon-rpad .fa.m5{ padding-right:5px; }
+.glyphicon-icon-lpad .glyphicon.m5,.fa-icon-lpad .fa.m5{ padding-left:5px; }
+.glyphicon-icon-rpad .glyphicon.m12,.fa-icon-rpad .fa.m12{ padding-right:12px; }
+.glyphicon-icon-lpad .glyphicon.m12,.fa-icon-lpad .fa.m12{ padding-left:12px; }
+.glyphicon-icon-rpad .glyphicon.m15,.fa-icon-rpad .fa.m15{ padding-right:15px; }
+.glyphicon-icon-lpad .glyphicon.m15,.fa-icon-lpad .fa.m15{ padding-left:15px; }
+
+
+
+ul.nav-menu-list-style .nav-header .menu-collapsible-icon{position:absolute; right:3px; top:16px; font-size:9px; }
+
+
+
+ul.nav-menu-list-style{
+  margin:0;
+}
+ul.nav-menu-list-style .nav-header{
+  border-top:1px solid #FFFFFF;
+  border-bottom:1px solid #e8e8e8;
+  display:block;
+  margin:0;
+  line-height:42px;
+  padding:0 8px;
+  font-weight:600;
+}
+ul.nav-menu-list-style> li{
+  position:relative; }
+ul.nav-menu-list-style> li a{
+  border-top:1px solid #FFFFFF;
+  border-bottom:1px solid #e8e8e8;
+  padding:0 10px;
+  line-height:32px;
+}
+ul.nav-menu-list-style> li:first-child a{
+}
+
+
+ul.nav-menu-list-style{list-style:none; padding:0px; margin:0px;}
+ul.nav-menu-list-style li .badge,ul.nav-menu-list-style li .pull-right,ul.nav-menu-list-style li span.badge,ul.nav-menu-list-style li label.badge{float:right; margin-top:7px;}
+ul.bullets{list-style:inside disc}
+ul.numerics{list-style:inside decimal}
+.ul.kas-icon-aero{}
+ul.kas-icon-aero li a:before{font-family: 'Glyphicons Halflings'; font-size:9px; content: "\e258"; padding-right:8px; }
